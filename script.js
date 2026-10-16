@@ -6,3 +6,10 @@ menuButton.addEventListener("click", () => {
 
   menuButton.setAttribute("aria-expanded", isActive);
 });
+
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("nav-active");
+    menuButton.setAttribute("aria-expanded", false);
+  });
+});
