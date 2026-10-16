@@ -358,3 +358,95 @@ img {
     flex-basis: 50%;
   }
 }
+
+.testimonials {
+  padding: 64px 24px 80px;
+}
+
+.testimonials h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--grey-400);
+  margin-bottom: 48px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial + .testimonial {
+  margin-top: 64px;
+}
+
+.testimonial img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 32px;
+}
+
+.testimonial figure {
+  margin: 0;
+}
+
+.testimonial blockquote {
+  margin: 0 0 32px;
+}
+
+.testimonial blockquote p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--grey-600);
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.testimonial figcaption {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 17px;
+  color: var(--grey-950);
+}
+
+.testimonial figcaption span {
+  display: block;
+  margin-top: 8px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--grey-400);
+}
+
+@media (min-width: 769px) {
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 160px 24px;
+  }
+  .testimonials h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 72px;
+  }
+  .testimonial + .testimonial {
+    margin-top: 0;
+  }
+  .testimonial img {
+    margin-bottom: 56px;
+  }
+  .testimonial blockquote {
+    margin-bottom: 64px;
+  }
+}
