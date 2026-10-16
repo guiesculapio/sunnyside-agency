@@ -293,3 +293,68 @@ img {
     padding: 64px 173px 64px 112px;
   }
 }
+
+.graphic-design,
+.photography {
+  position: relative;
+}
+
+.graphic-design-text,
+.photography-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  padding: 0px 24px 64px 24px;
+}
+
+.graphic-design-text h2,
+.photography-text h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.graphic-design-text p,
+.photography-text p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 330px;
+  margin-bottom: 0;
+}
+
+.graphic-design-text {
+  color: var(--green-800);
+}
+
+.photography-text {
+  color: var(--blue-800);
+}
+
+.graphic-design-image,
+.photography-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .graphic-design-photography {
+    display: flex;
+    flex-direction: row;
+  }
+  .graphic-design,
+  .photography {
+    flex-basis: 50%;
+  }
+}
