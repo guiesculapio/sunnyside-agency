@@ -28,11 +28,11 @@
 h1 {
   font-family: "Fraunces", serif;
   font-weight: 900;
-  font-size: 42px;
+  font-size: clamp(32px, 11.2vw, 42px);
   line-height: 1.2;
   color: hsl(0, 100%, 100%);
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.19em;
 }
 
 img {
@@ -551,4 +551,10 @@ img {
 
 .social-media a:hover img {
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 359px) {
+  .footer nav ul {
+    gap: 32px;
+  }
 }
