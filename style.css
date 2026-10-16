@@ -123,6 +123,20 @@ img {
   color: hsl(232, 10%, 55%);
 }
 
+.nav a:not(.button-header) {
+  padding-bottom: 4px;
+  background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 2px;
+  transition-property: background-size, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.nav a:not(.button-header):hover,
+.nav a:not(.button-header):focus-visible {
+  background-size: 100% 2px;
+  color: var(--grey-950);
+}
+
 .nav .button-header {
   background-color: hsl(51, 100%, 49%);
   padding: 12px 28px;
@@ -160,6 +174,10 @@ img {
     transform: none;
   }
   .nav a {
+    color: hsl(0, 100%, 100%);
+  }
+  .nav a:not(.button-header):hover,
+  .nav a:not(.button-header):focus-visible {
     color: hsl(0, 100%, 100%);
   }
   .menu-mobile {
